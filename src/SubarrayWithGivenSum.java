@@ -2,16 +2,12 @@ import java.io.*;
 
 public class SubarrayWithGivenSum {
 	
-	static void fun(int a[],int ts){
+	static void obtainSubarray(int a[],int ts){
         int sum=0,start=1,end=0,j=0;
         for(int i=0;i<a.length;i++){
-            
-            
-                sum+=a[i];
-                end++;
-            
+            sum+=a[i];
+            end++;
             while(sum>ts){
-                
                 sum-=a[j];j++;
                 start++;
             }
@@ -29,20 +25,18 @@ public class SubarrayWithGivenSum {
 		
 		int t = Integer.parseInt(ip.readLine());
 		for(int j=0;j<t;j++){
-		    String inp[]=new String[5];
-           inp=ip.readLine().split(" ");
-		    int n = Integer.parseInt(inp[0]);
-		    String inp1[]=new String[n];
-		    int ts = Integer.parseInt(inp[1]);
-		    int a[] = new int[n];
+		    String inp[]=new String[1];
+            inp=ip.readLine().split(" ");
+		    int arrayLength = Integer.parseInt(inp[0]);
+		    String inp1[]=new String[arrayLength];
+		    int sum = Integer.parseInt(inp[1]);
+		    int tempArray[] = new int[arrayLength];
 		    inp1=ip.readLine().split(" ");
-		    for(int i=0;i<n;i++)
+		    for(int i=0;i<arrayLength;i++)
 		    {
-		        
-		        a[i]=Integer.parseInt(inp1[i]);
+		        tempArray[i]=Integer.parseInt(inp1[i]);
 		    }
-		     fun(a,ts);
-		     
+		    obtainSubarray(tempArray,sum);
 		}
 	}
 }

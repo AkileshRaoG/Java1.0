@@ -3,21 +3,21 @@ import java.io.*;
 public class SubarrayWithGivenSum {
 	
 	static void obtainSubarray(int tempArray[],int ts){
-        int sum=0,start=1,end=0,j=0;
-        for(int i=0;i<tempArray.length;i++){
-            sum+=tempArray[i];
-            end++;
-            while(sum>ts){
-                sum-=tempArray[j];j++;
-                start++;
-            }
-            if(sum==ts){
-                System.out.println(start+" "+end);
-                return;
-            }
-        }
-        System.out.println("-1");
-    }
+		int sum=0,start=1,end=0,j=0;
+		for(int i=0;i<tempArray.length;i++){
+		    sum+=tempArray[i];
+		    end++;
+		    while(sum>ts){
+			sum-=tempArray[j];j++;
+			start++;
+		    }
+		    if(sum==ts){
+			System.out.println(start+" "+end);
+			return;
+		    }
+		}
+		System.out.println("-1");
+	}
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		// TODO Auto-generated method stub

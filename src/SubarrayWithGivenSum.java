@@ -2,13 +2,13 @@ import java.io.*;
 
 public class SubarrayWithGivenSum {
 	
-	static void obtainSubarray(int a[],int ts){
+	static void obtainSubarray(int tempArray[],int ts){
         int sum=0,start=1,end=0,j=0;
-        for(int i=0;i<a.length;i++){
-            sum+=a[i];
+        for(int i=0;i<tempArray.length;i++){
+            sum+=tempArray[i];
             end++;
             while(sum>ts){
-                sum-=a[j];j++;
+                sum-=tempArray[j];j++;
                 start++;
             }
             if(sum==ts){

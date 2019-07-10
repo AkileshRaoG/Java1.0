@@ -21,10 +21,10 @@ public class SubarrayWithGivenSum {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		// TODO Auto-generated method stub
-		BufferedReader ip= new BufferedReader(new InputStreamReader(System.in));
+		BufferedReader bufReader= new BufferedReader(new InputStreamReader(System.in));
 		
-		int t = Integer.parseInt(ip.readLine());
-		for(int j=0;j<t;j++){
+		int testCases = Integer.parseInt(bufReader.readLine());
+		for(int j=0;j<testCases;j++){
 			String inp[]=new String[1];
 			inp=ip.readLine().split(" ");
 			int arrayLength = Integer.parseInt(inp[0]);

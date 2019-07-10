@@ -25,18 +25,18 @@ public class SubarrayWithGivenSum {
 		
 		int t = Integer.parseInt(ip.readLine());
 		for(int j=0;j<t;j++){
-		    String inp[]=new String[1];
-            inp=ip.readLine().split(" ");
-		    int arrayLength = Integer.parseInt(inp[0]);
-		    String inp1[]=new String[arrayLength];
-		    int sum = Integer.parseInt(inp[1]);
-		    int tempArray[] = new int[arrayLength];
-		    inp1=ip.readLine().split(" ");
-		    for(int i=0;i<arrayLength;i++)
-		    {
-		        tempArray[i]=Integer.parseInt(inp1[i]);
-		    }
-		    obtainSubarray(tempArray,sum);
+			String inp[]=new String[1];
+			inp=ip.readLine().split(" ");
+			int arrayLength = Integer.parseInt(inp[0]);
+		    	String inp1[]=new String[arrayLength];
+		    	int sum = Integer.parseInt(inp[1]);
+		    	int tempArray[] = new int[arrayLength];
+		    	inp1=ip.readLine().split(" ");
+		    	for(int i=0;i<arrayLength;i++)
+		    	{
+				tempArray[i]=Integer.parseInt(inp1[i]);
+		    	}
+		    	obtainSubarray(tempArray,sum);
 		}
 	}
 }
